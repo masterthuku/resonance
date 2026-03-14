@@ -95,7 +95,7 @@ const DashboardSidebar = () => {
   const mainMenuItems: MenuItem[] = [
     {
       title: "Dashboard",
-      url: "/dashboard",
+      url: "/",
       icon: Home,
     },
     {
