@@ -1,14 +1,7 @@
-import { SidebarTrigger } from "@/components/ui/sidebar"
+import DashboardView from "@/features/dashboard/views/DashboardView";
 
 const DashboadPage = () => {
-  return (
-    <div className="flex flex-1 items-center justify-center">
-        <SidebarTrigger/>
-        <h1 className="text-2xl font-semibold">
-            Dashboard
-        </h1>
-    </div>
-  )
-}
+  return <DashboardView />;
+};
 
-export default DashboadPage
+export default DashboadPage;
