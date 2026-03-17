@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import {  Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { ClerkProvider } from "@clerk/nextjs";
@@ -8,11 +8,13 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-;
-
 export const metadata: Metadata = {
-  title: "Resonance",
-  description: "Resonance. Your AI Voice Assistant.",
+  title: {
+    default: "Resonance",
+    template: "%s | Resonance",
+  },
+  description:
+    "Resonance. Your AI powered text to speech and voice cloning tool.",
 };
 
 export default function RootLayout({
@@ -23,14 +25,11 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-      <body
-        className={inter.className}
-      >
-        {children}
-        <Toaster/>
-      </body>
-    </html>
+        <body className={inter.className}>
+          {children}
+          <Toaster />
+        </body>
+      </html>
     </ClerkProvider>
-    
   );
 }
